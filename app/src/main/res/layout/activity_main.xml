@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	tools:context = ".MainActivity">
+
+	<LinearLayout
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "16dp">
+
+		<LinearLayout
+			android:layout_width = "0dp"
+			android:layout_height = "wrap_content"
+			android:layout_weight = "1"
+			android:orientation = "vertical">
+
+			<TextView
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:fontFamily = "sans-serif-medium"
+				android:gravity = "center"
+				android:padding = "4dp"
+				android:text = "Blue Wrestler"
+				android:textColor = "#2196F3"
+				android:textSize = "14sp" />
+
+			<TextView
+				android:id = "@+id/blue_wrestler_score"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:fontFamily = "sans-serif-light"
+				android:gravity = "center"
+				android:text = "0"
+				android:textColor = "#2196F3"
+				android:textSize = "56sp" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "takedown"
+				android:text = "Takedown" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "reversal"
+				android:text = "Reversal" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "escape"
+				android:text = "Escape" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "nearFall2Sec"
+				android:text = "2 Sec. Near Fall" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "nearFall5Sec"
+				android:text = "5 Sec. Near Fall" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "add1PointPenalty"
+				android:text = "+1 Point Penalty" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:backgroundTint = "#2196F3"
+				android:onClick = "add2PointPenalty"
+				android:text = "+2 Point Penalty" />
+
+		</LinearLayout>
+
+		<View
+			android:layout_width = "1dp"
+			android:layout_height = "match_parent"
+			android:background = "@android:color/darker_gray" />
+
+		<LinearLayout
+			android:layout_width = "0dp"
+			android:layout_height = "wrap_content"
+			android:layout_weight = "1"
+			android:orientation = "vertical">
+
+			<TextView
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:fontFamily = "sans-serif-medium"
+				android:gravity = "center"
+				android:padding = "4dp"
+				android:text = "Red Wrestler"
+				android:textColor = "#F44336"
+				android:textSize = "14sp" />
+
+			<TextView
+				android:id = "@+id/red_wrestler_score"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:fontFamily = "sans-serif-light"
+				android:gravity = "center"
+				android:text = "0"
+				android:textColor = "#F44336"
+				android:textSize = "56sp" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:onClick = "addTwoForRedWrestler"
+				android:text = "Takedown"
+				android:theme = "@style/RedButtonStyle" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addTwoForRedWrestler"
+				android:text = "Reversal" />
+
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addOneForRedWrestler"
+				android:text = "Escape" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addTwoForRedWrestler"
+				android:text = "2 Sec. Near Fall" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addThreeForRedWrestler"
+				android:text = "5 Sec. Near Fall" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addOneForRedWrestler"
+				android:text = "+1 Point Penalty" />
+			
+			<Button
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:layout_marginHorizontal = "24dp"
+				android:layout_marginBottom = "8dp"
+				android:theme = "@style/RedButtonStyle"
+				android:onClick = "addTwoForRedWrestler"
+				android:text = "+2 Point Penalty" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_alignParentBottom = "true"
+		android:layout_centerHorizontal = "true"
+		android:layout_marginBottom = "32dp"
+		android:onClick = "resetScore"
+		android:text = "Reset" />
+
+</RelativeLayout>
